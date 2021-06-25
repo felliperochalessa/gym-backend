@@ -43,3 +43,53 @@ DELETE:
   Observação: ao remover um aluno do sistema, seus dados referentes as avaliações, treinos, mensalidades 
   e matrículas em modalidades são igualmente removidos
 ```
+
+**Categorias:**
+```
+POST:
+{
+  "nome" : "Nome da Categoria",
+}
+
+
+GET : 
+  - /categorias -> obtém todas as categorias inclusas no sistema
+
+PUT: 
+  - /categorias/:idCategoria -> altera os dados da categoria ao 
+    informar o id da categoria correspondente. 
+  
+DELETE: 
+  - /categorias/:idCategoria -> exclui os dados da categoria ao 
+    informar o id da categoria correspondente.
+    
+    Observação: ao remover a categoria do sistema, qualquer exercício que utilize essa categoria 
+    também é removido.
+    
+```
+
+**Exercícios:**
+```
+POST:
+{
+  "nome" : "Nome do exercício",
+  "descricao" : "descrição do exercício como os benefícios e para que serve",
+  "idCategoria" : "id da categoria"
+}
+
+
+GET : 
+  - /exercicios -> obtém todos os exercícios inclusos no sistema
+
+PUT: 
+  - /exercicios/:idExercicio -> altera os dados do exercício ao 
+    informar o id do exercício correspondente. 
+  
+DELETE: 
+  - /exercicios/:idExercicio -> exclui os dados do exercício ao 
+    informar o id do exercício correspondente.
+    
+    Observação: ao remover o exercício do sistema, qualquer ficha de treino que utilize esse exercício 
+    também é removida.
+    
+```
